@@ -1,0 +1,17 @@
+header
+  .header-left
+  a(href='/') Home
+  .header-right
+    if user
+      a(href='/me') Profile
+      a(href='#' onclick='logout()') Logout
+      a(href='/addproduct') Add Product
+      a(href='/track') Track Product
+      a(href='/activity') Track Activity
+    else
+      a(href='/login') Log In
+      a(href='/signup') Sign Up
+  br
+script
+  include ./js/logout.js
+

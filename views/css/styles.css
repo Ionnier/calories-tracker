@@ -1,0 +1,35 @@
+.login-form{
+    display: flex;
+    flex-direction: row;
+}
+.login-form *{
+    margin: 5px;
+}
+.login-form label,input{
+    display: block;
+}
+.login-form p{
+    display: flex;
+}
+a {
+    margin: 10px 10px 10px 10px;
+}
+.header{
+    float: right;
+    display: flex;  
+    margin-bottom: 100px;
+}
+.header-right{
+    display: flex;
+    float: right;
+}
+@media only screen and (max-width: 600px) {
+    .header-left{
+        display: flex;
+        flex-direction: column;  
+    }
+    .header-right{
+        display: flex;
+        flex-direction: column;    
+    }
+  }

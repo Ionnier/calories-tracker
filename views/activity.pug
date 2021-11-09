@@ -1,0 +1,18 @@
+html
+  head
+    title Add Activity
+    style
+      include ./css/styles.css
+  body
+    include _header
+    h1= message
+    form(onsubmit="addActivity();return false")
+      label(for="add-activity") Activity Name
+      input(type="text" name="add-activity" value="" required)
+      label(for="calories_consumed") Estimated Calories Consumed
+      input(type="number" name="calories_consumed" required)
+      label(for="duration") Duration
+      input(type="number" name="duration")
+      input(type="submit" value="Add Activty")
+script
+  include ./js/addActivity.js 

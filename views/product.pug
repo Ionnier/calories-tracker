@@ -1,0 +1,50 @@
+html
+  head
+    title Add product
+    style
+      include ./css/styles.css
+  body
+    include _header
+    h1= message
+    form(onsubmit="return false") 
+      label(for='product_name-cc535') Product Name
+      input(type="text",name="product_name-cc535" required)
+      label(for='product_unit-cc535') Product Unit
+      input(type="text",name="product_unit-cc535" required)
+      label(for='using-ingredients') Using Ingredients?
+      input#checkbox-ingredient(type="checkbox",name="using-ingredients",onclick="hidenutrients();")
+      label.nutrient(for="no_units-cc535") Number of Units
+      input.nutrient(type="text",name="no_units-cc535")
+      label.nutrient(for="calories-cc535") Calories
+      input.nutrient(type="text",name="calories-cc535")
+
+      label.nutrient(for="proteins-cc535") Proteins
+      input.nutrient(type="text",name="proteins-cc535")
+
+      label.nutrient(for="carbohydrates-cc535") Carbohydrates
+      input.nutrient(type="text",name="carbohydrates-cc535")
+
+      label.nutrient(for="sugars-cc535") Sugars
+      input.nutrient(type="text",name="sugars-cc535")
+
+      label.nutrient(for="fats-cc535") Fats
+      input.nutrient(type="text",name="fats-cc535")
+
+      label.nutrient(for="saturated_fats-cc535") Saturated fats
+      input.nutrient(type="text",name="saturated_fats-cc535")
+
+      label.nutrient(for="fibers-cc535") Fibers
+      input.nutrient(type="text",name="fibers-cc535")
+
+      label.nutrient(for="salt-cc535") Salt
+      input.nutrient(type="text",name="salt-cc535")
+
+
+      input.ingredient#search-ingredients-cc535(type="search" style="display:none" name="search-ingredients-cc535" value="")
+      label.ingredient(for="search-ingredients-cc535" style="display:none") Search Ingredient
+      div.ingredient#searchresults
+      div.ingredient#addedingredients(style="display:none")
+
+      input(type="button" value="Add Product" onclick="addProduct()")
+script
+  include ./js/addProduct.js 

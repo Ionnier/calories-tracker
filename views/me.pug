@@ -1,0 +1,26 @@
+mixin day(date,activity,summary)
+  h2= date
+  table
+    tr
+      th Activity
+      th Calories consumed
+      th Date added
+    each act in activity
+      tr
+        td= act.name
+        td= act.calories
+        td= act.on
+    tr
+      td Summary
+      td= summary
+      td= date 
+html
+  head
+    title= name
+    style
+      include ./css/styles.css
+  body
+  include _header
+  h1= message
+  each act in activities
+    +day(act.date,act.activities,act.summary)

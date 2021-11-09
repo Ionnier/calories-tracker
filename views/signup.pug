@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Sign Up Page
+  style
+    include ./css/styles.css
+main
+  include _header
+  h1= message
+  h2(style="color: red;") WARNING! Do not use a real password.
+  form(onsubmit='signUp();return false;')
+    label(for='first_name-textbox') First Name: 
+    input(type='text', name='first_name-textbox',required)
+    label(for='last_name-textbox') Last Name: 
+    input(type='text', name='last_name-textbox',required)
+    label(for='email-textbox') Email: 
+    input(type='email', name='email-textbox',required)
+    label(for='password-textbox') Password: 
+    input(type='password', name='password-textbox',required)
+    input(type='submit', value='Submit')
+  h2(style="color: red;") WARNING! Do not use a real password.
+script
+  include ./js/signUp.js

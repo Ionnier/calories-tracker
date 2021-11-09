@@ -1,0 +1,16 @@
+html
+  head
+    title Track
+    style
+      include ./css/styles.css
+  body
+    include _header
+    h1= message
+    form(onsubmit="return false") 
+      input.ingredient#search-ingredients-cc535(type="search" name="search-ingredients-cc535" value="")
+      label.ingredient(for="search-ingredients-cc535" style="display:none") Search Ingredient
+      div.ingredient#searchresults
+      div.ingredient#addedingredients
+      input(type="button" value="Track Product" onclick="trackProducts()")
+script
+  include ./js/trackProduct.js 

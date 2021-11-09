@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Login Page
+  style
+    include ./css/styles.css
+main
+  include _header
+  h1= message
+  #login-div.login-form
+    form
+      label(for='email-textbox') Email: 
+      input#email-textbox(type='email', name='email-cc535')
+      label(for='password-textbox') Password: 
+      input#password-textbox(type='password', name='password-cc535')
+      input#login-(type='submit', value='Submit', onclick='login(); return false;')
+script
+  include ./js/scripts.js
